@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>countdown</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="page">
+		<div class="countdown">
+			<div class="time middle col">
+				<span>
+					<div id="d">100</div>
+					Days
+				</span>
+				:
+				<span>
+					<div id="h">12</div>
+					Hours
+				</span>
+				:
+				<span>
+					<div id="m">00</div>
+					minutes
+				</span>
+				:
+				<span>
+					<div id="s">00</div>
+					seconds
+				</span>				
+			</div>
+		</div>
+
+
+			<div class="newsletter">
+
+	              <div class="letter middle col">
+	                <h2> We will be coming soon</h2>
+	                <h4>Subscribe to get notified when we start</h4>
+	                <input type="text" name="text" placeholder="Enter your email">
+	                <input  class="newsletter-btn" type="button" name="button" value="Subscribe">	
+	            </div>
+		   
+		   </div>
+			
+		
+
+	</div>
+<script type="text/javascript">
+   function countdown(){
+		var naw = new Date();
+		var event =new Date("January 1 ,2020 00:00:00" );
+
+		var currentTime = naw.getTime();
+		var eventDate = event.getTime();
+
+		var realTime = eventDate-currentTime;
+        
+        var s = Math.floor(realTime/1000);
+        var m = Math.floor(s/60);
+        var h = Math.floor(m/60);
+        var d = Math.floor(h/24);
+  
+        h %= 24;
+        s %= 60;
+        m %= 60; 
+        
+         h =(h<10) ? "0" +h :h;
+         m =(m<10) ? "0" +m :m;
+         s =(s<10) ? "0" +s :s;
+
+         
+         document.getElementById('d').innerHTML = d;
+
+         document.getElementById('h').innerHTML = h;
+         document.getElementById('m').innerHTML = m;
+         document.getElementById('s').innerHTML = s;
+
+         setTimeout(countdown, 1000);
+	}
+	countdown();
+</script>
+</body>
+</html> 

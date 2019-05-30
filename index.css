@@ -1,0 +1,91 @@
+*{
+	font-family: "monteserrat", sans-serif;
+}
+body{
+	padding:0;
+	margin:0;
+	//background: url(tree.jpg) no-repeat;
+	//background-size: cover;
+	//background-position: center;  
+}
+.page{
+	display: flex;
+	background-color: #f1f1f1;
+}
+.countdown,.newsletter{
+	flex:1;
+	height: 100vh;
+	position: relative;
+}
+.time{
+	background:url(tractor.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	-webkit-clip-path: polygon(100% 0%, 85% 51%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    clip-path: polygon(100% 0%, 85% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+	height: 100vh; 
+	display: flex;
+	color: white;
+}
+.middle{
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 28px;
+	font-weight:600;
+	
+}
+.middle span{
+	padding:20px;
+	color: white;
+	font-family:montserrat;
+	font-style: italic;
+}
+.middle span div{
+	 font-size:40px; 
+}
+
+.newsletter .middle{
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.letter h2{
+	display: block;
+	font-family:monospace;
+	font-size:40px;
+	text-transform: uppercase;
+	word-break:keep-all;
+}
+.letter h4{
+	font-size: 19px;
+	font-family:monospace;
+	font-style: italic;
+}
+input{
+	display: block;
+	margin: 19px 5px;
+	padding:20px;
+	width:100%; 
+	outline: none;
+	border:none;
+	border-radius: 100px;
+	text-align: center;
+
+}
+
+input[type="button"]{
+	width: 110%;
+	color: #fff;
+	letter-spacing: 6px;
+	font-family: aerial;
+    transition:3s;
+	background:linear-gradient(90deg,red,black,#ffbf80);
+}
+input[type="button"]:hover{
+	transition:3s;
+	background:linear-gradient(90deg,#ffbf80,black,red	);
+}
